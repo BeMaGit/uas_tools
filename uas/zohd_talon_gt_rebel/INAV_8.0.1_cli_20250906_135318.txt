@@ -1,0 +1,238 @@
+diff all
+
+# version
+# INAV/SPEEDYBEEF405WING 8.0.1 Mar 28 2025 / 09:52:26 (ae47bcba) 
+# GCC-13.2.1 20231009
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults noreboot
+
+# resources
+
+# Timer overrides
+
+# Outputs [servo]
+servo 1 1000 2000 1470 -100
+servo 2 1000 2000 1470 -100
+servo 3 1000 2000 1610 -100
+servo 4 1000 2000 1390 -100
+
+# safehome
+
+# Fixed Wing Approach
+
+# geozone
+
+# geozone vertices
+
+# features
+feature -TX_PROF_SEL
+feature -BLACKBOX
+feature GPS
+feature PWM_OUTPUT_ENABLE
+feature FW_AUTOTRIM
+
+# beeper
+
+# blackbox
+blackbox -NAV_ACC
+blackbox NAV_POS
+blackbox NAV_PID
+blackbox MAG
+blackbox ACC
+blackbox ATTI
+blackbox RC_DATA
+blackbox RC_COMMAND
+blackbox MOTORS
+blackbox -GYRO_RAW
+blackbox -PEAKS_R
+blackbox -PEAKS_P
+blackbox -PEAKS_Y
+blackbox SERVOS
+
+# Receiver: Channel map
+
+# Ports
+serial 4 33554432 115200 115200 0 115200
+
+# LEDs
+
+# LED color
+
+# LED mode_color
+
+# Modes [aux]
+aux 0 0 0 1600 2075
+aux 1 2 1 900 1275
+aux 2 11 5 1300 1500
+aux 3 10 5 1100 1300
+aux 4 28 5 1900 2100
+aux 5 53 5 1700 1900
+aux 6 3 5 1500 1700
+aux 7 12 1 1700 2100
+aux 8 36 4 900 1225
+aux 9 21 2 1675 2100
+aux 10 54 2 900 1275
+aux 11 13 6 1475 2100
+
+# Adjustments [adjrange]
+
+# Receiver rxrange
+
+# temp_sensor
+
+# Mission Control Waypoints [wp]
+#wp 0 invalid
+
+# OSD [osd_layout]
+osd_layout 0 0 1 2 V
+osd_layout 0 1 12 0 H
+osd_layout 0 2 0 0 V
+osd_layout 0 3 8 6 V
+osd_layout 0 4 8 6 V
+osd_layout 0 7 24 17 V
+osd_layout 0 9 13 11 V
+osd_layout 0 11 2 3 H
+osd_layout 0 12 1 4 H
+osd_layout 0 13 13 10 V
+osd_layout 0 14 1 1 V
+osd_layout 0 15 35 10 V
+osd_layout 0 20 41 1 V
+osd_layout 0 21 41 2 V
+osd_layout 0 22 26 15 V
+osd_layout 0 23 1 18 V
+osd_layout 0 30 13 18 V
+osd_layout 0 32 1 11 V
+
+# Programming: logic
+
+# Programming: global variables
+
+# Programming: PID controllers
+
+# OSD: custom elements
+
+# master
+set gyro_zero_x = -1
+set gyro_zero_y = -20
+set gyro_zero_z = 2
+set ins_gravity_cmss =  982.075
+set acc_hardware = ICM42605
+set acczero_x = -5
+set acczero_y = -4
+set acczero_z = 34
+set accgain_x = 4099
+set accgain_y = 4093
+set accgain_z = 4103
+set align_mag = CW270FLIP
+set mag_hardware = NONE
+set baro_hardware = SPL06
+set blackbox_rate_denom = 2
+set motor_pwm_protocol = STANDARD
+set failsafe_procedure = RTH
+set failsafe_min_distance = 5000
+set failsafe_min_distance_procedure = RTH
+set applied_defaults = 1
+set gps_ublox_use_galileo = ON
+set gps_ublox_use_glonass = ON
+set nav_rth_climb_first = OFF
+set nav_rth_allow_landing = NEVER
+set nav_rth_altitude = 8000
+set nav_rth_home_altitude = 8000
+set nav_fw_bank_angle = 45
+set nav_fw_loiter_radius = 1000
+set nav_fw_launch_velocity = 150
+set nav_fw_launch_max_angle = 180
+set nav_fw_launch_idle_motor_delay = 500
+set nav_fw_launch_motor_delay = 100
+set nav_fw_launch_spinup_time = 250
+set nav_fw_launch_max_altitude = 10000
+set nav_fw_launch_climb_angle = 15
+set nav_fw_allow_manual_thr_increase = ON
+set osd_video_system = AVATAR
+
+# control_profile
+control_profile 1
+
+set fw_ff_pitch = 151
+set fw_ff_roll = 40
+set fw_ff_yaw = 255
+set fw_level_pitch_trim =  0.008
+set roll_rate = 31
+set pitch_rate = 8
+set yaw_rate = 3
+
+# control_profile
+control_profile 2
+
+
+# control_profile
+control_profile 3
+
+
+# mixer_profile
+mixer_profile 1
+
+set platform_type = AIRPLANE
+set has_flaps = ON
+set model_preview_type = 28
+
+# Mixer: motor mixer
+
+mmix reset
+
+mmix 0  1.000  0.000  0.000  0.000
+
+# Mixer: servo mixer
+smix reset
+
+smix 0 1 0 100 0 -1
+smix 1 2 0 100 0 -1
+smix 2 3 1 100 0 -1
+smix 3 3 2 100 0 -1
+smix 4 4 1 -100 0 -1
+smix 5 4 2 100 0 -1
+smix 6 1 11 25 0 -1
+smix 7 2 11 -25 0 -1
+smix 8 5 8 100 0 -1
+
+# mixer_profile
+mixer_profile 2
+
+
+# Mixer: motor mixer
+
+# Mixer: servo mixer
+
+# battery_profile
+battery_profile 1
+
+set vbat_min_cell_voltage = 360
+set vbat_warning_cell_voltage = 380
+set battery_capacity = 5200
+set throttle_idle =  0.000
+set nav_fw_min_thr = 1000
+set nav_fw_max_thr = 2000
+set nav_fw_launch_thr = 1800
+set nav_fw_launch_idle_thr = 1100
+
+# battery_profile
+battery_profile 2
+
+
+# battery_profile
+battery_profile 3
+
+
+# restore original profile selection
+control_profile 1
+mixer_profile 1
+battery_profile 1
+
+# save configuration
+save
+
+# 
