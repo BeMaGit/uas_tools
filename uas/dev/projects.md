@@ -1,5 +1,6 @@
 # Development Projects
 ## Pipeline
 ## Ideas
-### Camera Nosecone
-Goal: Create a foldable propeller nosecone that integrates an FPV camera, so the plane is more efficient.
+|Name|Description|Status|
+|-|-|-|
+|Camerar Nosecone|Create a foldable propeller nosecone that integrates an FPV camera, so the plane is more efficient.||
