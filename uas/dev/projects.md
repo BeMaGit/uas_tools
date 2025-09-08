@@ -3,4 +3,5 @@
 ## Ideas
 |Name|Description|Status|
 |-|-|-|
-|Camerar Nosecone|Create a foldable propeller nosecone that integrates an FPV camera, so the plane is more efficient.||
+|Camera Nosecone|Create a foldable propeller nosecone that integrates an FPV camera, so the plane is more efficient.||
+|Autonomous Drone|3D Printed drone able to perform automous missions||
