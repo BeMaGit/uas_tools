@@ -11,4 +11,9 @@ https://github.com/inavFlight/inav/wiki
 https://betaflight.com/
 #### Ardupilot
 https://ardupilot.org/
+#### Pixhawk
+https://pixhawk.org/
+### Vtx
+#### DJI
+https://www.dji.com/at/downloads/softwares/dji-assistant-2-consumer-drones-series
 
